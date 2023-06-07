@@ -2,8 +2,8 @@ import time
 
 def count_down(time_set):
     try:
-        sec = int(time_set) * 60 # convert minutes to seconds
-        if sec < 60: # warning message if input time is less than 1 minute
+        sec = int(time_set) * 60
+        if sec < 60:
             print("Warning: Time input is less than 1 minute!")
             return
         print("Your Count down time starts for {} minutes.".format(time_set))
@@ -20,11 +20,10 @@ def count_down(time_set):
         print("Completed!")
     except ValueError:
         print("Error: Please enter only integers for minutes!")
-        count_down(input("\nPlease enter the time for count down (in minutes): "))
+        count_down(input("\nPlease enter the time"))
 
-# take user input for time and call the function
 try:
-    time_set = int(input("Please enter your count down time (in minutes): \t"))
+    time_set = int(input("Please enter time  (in minutes): \t"))
     count_down(time_set)
 except ValueError:
     print("Error: Please enter only integers for minutes!")
