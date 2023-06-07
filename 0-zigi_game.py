@@ -22,6 +22,6 @@ def zigzag_game(character):
         space = " " * count
         
 try:
-    zigzag_game("****")
+    zigzag_game("*")
 except KeyboardInterrupt:
     pass
